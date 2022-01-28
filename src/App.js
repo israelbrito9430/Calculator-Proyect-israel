@@ -3,8 +3,8 @@ import { useState } from 'react';
 import './App.scss';
 
 function App() {
-  const [number1,setNumber1] = useState(0);
-  const [number2,setNumber2] = useState(0);
+  const [number1,setNumber1] = useState("");
+  const [number2,setNumber2] = useState("");
   const [operation,setOperation] = useState('sumar');
   const [result,setResult] = useState(0);
   const calculate = operation => {
@@ -19,8 +19,8 @@ function App() {
       resultCalculated = Number(number1) / Number(number2)
     }
     setResult(resultCalculated)
-    setNumber1(0)
-    setNumber2(0)
+    setNumber1("")
+    setNumber2("")
   }
   return (
     <div className="container">
