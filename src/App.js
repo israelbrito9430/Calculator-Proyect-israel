@@ -13,6 +13,8 @@ function App() {
       resultCalculated = Number(number1) + Number(number2)
     }else if(operation === 'restar'){
       resultCalculated = Number(number1) - Number(number2)
+    }else if (operation === 'Multiplicar'){
+      resultCalculated = Number(number1) * Number(number2)
     }
     setResult(resultCalculated)
     setNumber1(0)
@@ -23,7 +25,7 @@ function App() {
       <select value={operation} onChange={(e) => setOperation(e.target.value)}>
         <option value='sumar'>Sumar</option>
         <option value='restar'>Restar</option>
-        <option>Multiplicar</option>
+        <option value='Multiplicar'>Multiplicar</option>
         <option>Dividir</option>
       </select>
       <label>
