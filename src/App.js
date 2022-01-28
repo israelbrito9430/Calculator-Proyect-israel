@@ -11,6 +11,8 @@ function App() {
     let resultCalculated = 0;
     if(operation === 'sumar'){
       resultCalculated = Number(number1) + Number(number2)
+    }else if(operation === 'restar'){
+      resultCalculated = Number(number1) - Number(number2)
     }
     setResult(resultCalculated)
     setNumber1(0)
@@ -18,9 +20,9 @@ function App() {
   }
   return (
     <div className="container">
-      <select value={operation} onChange={(value) => setOperation(value)}>
+      <select value={operation} onChange={(e) => setOperation(e.target.value)}>
         <option value='sumar'>Sumar</option>
-        <option>Restar</option>
+        <option value='restar'>Restar</option>
         <option>Multiplicar</option>
         <option>Dividir</option>
       </select>
